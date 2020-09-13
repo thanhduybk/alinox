@@ -1,0 +1,35 @@
+.settings-page {
+  padding: 48px 0;
+
+  .sidebar {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    object-fit: contain;
+
+    li {
+      border: 1px solid #8c8c8c;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    li.ant-menu-item-selected {
+      font-weight: bold;
+    }
+  }
+
+  .content-container {
+    margin-left: 22%;
+    margin-right: 2%;
+    margin-top: 4px;
+    width: 78%;
+
+    @media screen and (min-width: 1600px) {
+      margin-left: 18%;
+    }
+  }
+
+
+}

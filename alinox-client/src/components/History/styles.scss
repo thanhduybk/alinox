@@ -1,0 +1,72 @@
+@import "../../global-styles";
+
+.history-page {
+  padding: 24px 28px;
+
+  margin: 0 auto;
+
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+
+  width: 80%;
+
+  .search-bar {
+    text-align: right;
+    width: 24%;
+    margin: 48px 0 16px auto;
+  }
+
+  .card-container {
+    //margin-top: 64px;
+  }
+
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+
+    }
+
+    .timestamp {
+      font-weight: normal;
+      font-size: 18px;
+      color: red;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .card-body {
+    .image {
+      border-radius: 8px;
+      svg {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .parameters {
+      line-height: 1.8;
+
+      .keys {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .created-at {
+    margin-top: 12px;
+    border-top: 1px solid lightgrey;
+    padding-top: 12px;
+    text-align: right;
+    font-style: italic;
+    font-size: 12px;
+  }
+}

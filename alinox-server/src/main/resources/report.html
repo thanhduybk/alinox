@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        html {
+            font-family: Helvetica, sans-serif;
+        }
+
+        body {
+            page-break-before: avoid;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .table-group {
+            display: flex;
+        }
+
+        .table {
+            padding: 16px;
+            margin: 8px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+            0 9px 28px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+            0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    THÔNG SỐ TRỤC ANILOX CHO MÁY IN FLEXO CÓ TỐI ĐA 10 ĐƠN VỊ IN
+</div>
+<div class="table-group">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Máy in:</th>
+                <td>${data.printer.name}</td>
+            </tr>
+            <tr>
+                <th>Số đơn vị in:</th>
+                <td>${data.printer.printUnit}</td>
+            </tr>
+            <tr>
+                <th>Ngày lập phiếu:</th>
+                <td>${data.createdAt}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Company</th>
+                <td>Alfreds Futterkiste</td>
+            </tr>
+            <tr>
+                <th>Maria Anders</th>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <th>Francisco Chang</th>
+                <td>Mexico</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Company</th>
+                <td>Alfreds Futterkiste</td>
+            </tr>
+            <tr>
+                <th>Maria Anders</th>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <th>Francisco Chang</th>
+                <td>Mexico</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

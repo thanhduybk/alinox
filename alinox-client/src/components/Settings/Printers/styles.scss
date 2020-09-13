@@ -1,0 +1,25 @@
+@import "../../../global-styles";
+
+.printer-table {
+  padding: 24px 28px;
+
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+
+  margin: 16px auto;
+
+  .printer-table-row {
+    transition: .4s all ease;
+
+    &:hover {
+      background-color: #e6f7ff;
+    }
+  }
+
+  .add-printer {
+    position: absolute;
+    bottom: 42px;
+    color: white;
+    background-color: $primary-color;
+  }
+}

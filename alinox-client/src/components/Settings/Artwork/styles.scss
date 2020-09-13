@@ -1,0 +1,18 @@
+@import "../../../global-styles";
+
+.artwork-table {
+  padding: 24px 28px;
+
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+
+  margin: 16px auto;
+
+  .artwork-table-row {
+    transition: .4s all ease;
+
+    &:hover {
+      background-color: #e6f7ff;
+    }
+  }
+}

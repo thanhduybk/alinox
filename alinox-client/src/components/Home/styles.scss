@@ -1,0 +1,282 @@
+@import "../../global-styles";
+
+.home-page {
+  .cover-bg {
+    img {
+      width: 100%;
+      max-height: 90vh;
+      object-fit: cover;
+    }
+
+    .cover-overlay {
+      position: absolute;
+
+      top: 30%;
+      transform: translateX(20%);
+
+      background-color: #0000008c;
+      padding: 24px 28px;
+
+      color: white;
+
+      .title {
+        font-size: 160px;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 128px;
+        }
+
+        letter-spacing: 8px;
+        line-height: 1;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .sub-title {
+        font-size: 42px;
+      }
+    }
+  }
+
+  //============================================
+
+  .overview {
+
+    margin: 72px 0 84px;
+    padding: 72px 0;
+    text-align: center;
+
+    .title {
+      width: 60%;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        font-size: 84px;
+        margin: 0 32px;
+        letter-spacing: 12px;
+      }
+
+      .line {
+        width: 24%;
+        border-top: 2px solid black;
+      }
+    }
+
+    .body {
+      width: 60%;
+      font-size: 28px;
+      margin: 32px auto 0;
+    }
+  }
+
+  // =================================================================
+
+  .evolution {
+    position: relative;
+    color: white;
+
+    .image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+      }
+
+      &.image-advantages {
+        img {
+          max-height: 56vh;
+        }
+      }
+    }
+
+    .content {
+      text-align: center;
+      background-color: #000;
+      padding: 24px 28px;
+      width: 64%;
+
+      position: absolute;
+      bottom: -196px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      &.content-research {
+        bottom: -120px;
+      }
+
+      &.content-advantages {
+        bottom: -120px;
+      }
+
+      &.content-types {
+        bottom: -108px;
+      }
+
+      .title {
+        font-size: 48px;
+        letter-spacing: 8px;
+      }
+
+      .body {
+        margin: 0 auto;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .video-demo {
+    margin: 0 auto 120px;
+    text-align: center;
+  }
+
+  //============================================================================
+
+  .chart {
+    margin-top: calc(196px + 64px);
+    margin-bottom: 128px;
+    text-align: center;
+
+    .content {
+      font-size: 32px;
+      width: 80%;
+      margin:0 auto 44px;
+    }
+
+    .image {
+      img {
+        width: 50%;
+      }
+
+      .caption {
+        font-size: 24px;
+        margin: 16px 0;
+      }
+    }
+  }
+
+  .my-carousel {
+    .my-carousel-item {
+      max-height: 84vh;
+      object-fit: cover;
+
+      .legend {
+        font-size: 24px;
+        background: black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .just-text {
+    width: 80%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    text-align: center;
+    font-size: 32px;
+
+    @media screen and (max-width: 1366px) {
+      margin-bottom: 184px;
+    }
+  }
+
+  .research-methods {
+    margin: calc(120px + 120px) auto 120px;
+
+    width: 80%;
+
+    .method {
+      display: flex;
+      align-items: center;
+
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 24px 28px;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      .method-name {
+        font-size: 32px;
+        width: 25%;
+        text-align: center;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      .method-content {
+        font-size: 24px;
+        width: 75%;
+
+        &:nth-child(odd) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .advantages {
+    margin: 120px auto;
+    padding: 64px 0;
+
+    width: 64%;
+
+    .advantage {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      .check {
+        width: 10%;
+        font-size: 64px;
+        text-align: center;
+        color: $primary-color;
+      }
+
+      .content {
+        width: 90%;
+        font-size: 32px;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .user-types {
+    margin: 172px auto;
+    width: 80%;
+
+
+    .user-type {
+      text-align: center;
+
+      .title {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .content {
+        font-size: 24px;
+      }
+
+      .line {
+        border: 2px solid $primary-color;
+        margin: 16px auto;
+        width: 50%;
+      }
+    }
+
+  }
+}

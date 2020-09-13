@@ -1,0 +1,44 @@
+@import "../../global-styles";
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  .login-header {
+    position: absolute;
+    top: 30%;
+
+    @media screen and (min-width: 1600px) {
+      top: 32%;
+    }
+  }
+
+  .login-form {
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+    padding: 28px 24px;
+
+    @media screen and (min-width: 1200px) {
+      width: 36%;
+    }
+
+    @media screen and (min-width: 1600px) {
+      width: 32%;
+    }
+
+    .login-submit-button {
+      margin-bottom: 0;
+    }
+  }
+
+  .to-register-page {
+    margin-left: 8px;
+
+    a {
+      margin-left: 4px;
+    }
+  }
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        html {
+            font-family: Helvetica, sans-serif;
+        }
+
+        body {
+            page-break-before: avoid;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(-90deg) scale(.68, .68);
+            -moz-transform: rotate(-90deg) scale(.58, .58);
+            zoom: 200%
+        }
+
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .product-image {
+            margin: 8px auto;
+            max-height: 200px;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .product-image img {
+            object-fit: contain;
+        }
+
+        .table-group {
+            display: flex;
+        }
+
+        .table {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+
+        }
+
+        table:not(.artwork) {
+            width: 48%;
+            border-radius: 6px;
+            border: 1px solid #595959;
+            display: inline-block;
+        }
+
+        table.artwork {
+            width: 80%;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        td, th {
+            text-align: left;
+            padding: 8px;
+            width: 50%;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    ANILOX ROLL&apos;S PARAMETERS HAVE MAXIMUM 10 PRINTING UNITS
+</div>
+<div class="table-group">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Printer:</th>
+                <td>${data.printer.name}</td>
+            </tr>
+            <tr>
+                <th>Units:</th>
+                <td>${data.printer.printUnit}</td>
+            </tr>
+            <tr>
+                <th>Date:</th>
+                <td>${data.createdAt}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>State/Province:</th>
+                <td>${data.customerProvince}</td>
+            </tr>
+            <tr>
+                <th>Country/Time:</th>
+                <td>${data.customerCountry}/GMT+7</td>
+            </tr>
+            <tr>
+                <th>Product:</th>
+                <td>${data.productName}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Customer</th>
+                <td>${data.customerName}</td>
+            </tr>
+            <tr>
+                <th>PO Code:</th>
+                <td>${data.productCode}</td>
+            </tr>
+            <tr>
+                <th>MO Code:</th>
+                <td>${data.customerCode}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Typical Printing:</th>
+                <td>${data.clazz.name}</td>
+            </tr>
+            <tr>
+                <th>Name of Material:</th>
+                <td>${data.material.name}</td>
+            </tr>
+            <tr>
+                <th>Type of Material:</th>
+                <td>${data.clazz.type}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>Type of Ink:</th>
+                <td>${data.ink}</td>
+            </tr>
+            <tr>
+                <th>Number of Colors:</th>
+                <td>${data.numColors}</td>
+            </tr>
+            <tr>
+                <th>Size:</th>
+                <td>${data.printer.maxRollSizeWidth}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Resolution (lpi):</th>
+                <td>${data.artworkResolution}</td>
+            </tr>
+            <tr>
+                <th>Type of Trame:</th>
+                <td>${data.tram}</td>
+            </tr>
+            <tr>
+                <th>Angle:</th>
+                <td>${data.tramRotation}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="table-group">
+    #foreach($item in $data.artworks)
+        <div class="table">
+            <table class="artwork">
+                <tr>
+                    <th>No.:</th>
+                    <td>${item.aniloxAxis}</td>
+                </tr>
+                <tr>
+                    <th>Color:</th>
+                    <td>${item.color}</td>
+                </tr>
+                <tr>
+                    <th>Typical Printing:</th>
+                    <td>${item.artwork.propertyName}</td>
+                </tr>
+                <tr>
+                    <th>Anilox Line Screen:</th>
+                    <td>${item.artwork.alinoxResolution}</td>
+                </tr>
+                <tr>
+                    <th>Anilox Volume (BCM):</th>
+                    <td>${item.artwork.inkVolume}</td>
+                </tr>
+                <tr>
+                    <th>Opening:</th>
+                    <td>${item.artwork.openDegree}</td>
+                </tr>
+                <tr>
+                    <th>Wall:</th>
+                    <td>${item.artwork.thickDegree}</td>
+                </tr>
+                <tr>
+                    <th>Anilox Angle:</th>
+                    <td>${item.artwork.angle}</td>
+                </tr>
+                <tr>
+                    <th>Anilox Shape:</th>
+                    <td>${item.artwork.shape}</td>
+                </tr>
+                <tr>
+                    <th>Depth Cell:</th>
+                    <td>${item.artwork.cellDepth}</td>
+                </tr>
+                <tr>
+                    <th>DO (%):</th>
+                    <td>${item.artwork.DO}</td>
+                </tr>
+                <tr>
+                    <th>Doctor Blades:</th>
+                    <td>${item.artwork.wiper.thick}</td>
+                </tr>
+            </table>
+
+        </div>
+    #end
+
+
+    #if($imageType and $image)
+        <div class="product-image">
+            <img src="data:${imageType};base64,${image}" alt="product-image">
+        </div>
+    #end
+</div>
+</body>
+</html>
